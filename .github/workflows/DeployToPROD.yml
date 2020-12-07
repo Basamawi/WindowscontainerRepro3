@@ -28,10 +28,6 @@ jobs:
       uses: nuget/setup-nuget@v1
       with:
         nuget-version: ${{ matrix.nuget-version }}
-  
-    - name: update build version
-      run: (Get-Content ProxyApp\Controllers\HomeController.cs).replace('BUILD_DATETIME_VERSION', (Get-Date).ToString('MM/dd/yyyy hh:mm:ss')) | Set-Content ProxyApp\Controllers\HomeController.cs
-      shell: powershell
 
     - name: nuget restore
       run: nuget restore
