@@ -2,14 +2,14 @@ name: DeployToPROD
 
 on:
   push:
-    branches: [ DeployToPROD ]
+    branches: [ main ]
   pull_request:
-    branches: [ DeployToPROD_ ]
+    branches: [ main_ ]
 
 env:
   CONFIGURATION: Release
-  APP: '.\ProxyApp.sln'
-  CONTAINER: 'crkepayacr.azurecr.io'
+  APP: '.\Empty.sln'
+  CONTAINER: 'reprowindow.azurecr.io'
   REPOSITORY: 'prod'
   TAG: 'latest'
 
