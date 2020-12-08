@@ -36,7 +36,7 @@ jobs:
       uses: microsoft/setup-msbuild@v1.0.2
 
     - name: run msbuild
-      run: msbuild /p:Configuration=${{ env.CONFIGURATION }} /p:DeployOnBuild=True /p:AutoParameterizationWebConfigConnectionStrings=False ${{ env.APP }}
+      run: msbuild /p:Configuration=${{ env.CONFIGURATION }} /p:DeployOnBuild=True /p:AutoParameterizationWebConfigConnectionStrings=True ${{ env.APP }}
 
     - name: azure docker login
       uses: azure/docker-login@v1
